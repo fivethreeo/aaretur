@@ -1,0 +1,1 @@
+set PATH=C:\Git\cmd;%CD%\env\Scripts;%CD%\node_modules\.bin;%PATH%
