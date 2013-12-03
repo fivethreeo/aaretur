@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock title %}
+
+{% block extrahead %}
+
+{% load compress %}
+
+{% compress css %}<link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}aaretur/base.less" />{% endcompress %}
+{% endblock extrahead %}
+
+{% block bodyclass %}{% endblock bodyclass %}
+
+{% block body %}
+<script id="app-template" type="template">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-9">
+            <h1>App</h1>
+            </div>
+            
+            <div class="col-md-3">
+            <p>Side</p>
+            </div>
+            
+        </div>
+    </div>
+</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}underscore-min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}backbone-min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}backbone-forms/backbone-forms.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}backbone-forms/editors/list.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}backbone-forms/templates/bootstrap3.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}app.js"></script>
+
+{% endblock body %}
