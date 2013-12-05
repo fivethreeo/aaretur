@@ -16,9 +16,7 @@
   <table class="table table-hover table-striped">
     <thead>
       <tr>
-        <th class="status-col">Status</th>
-        <th>Task</th>
-        <th class="date-col">Due date</th>
+        <th>Navn</th>
         <th class="action-col">&nbsp;</th>
       </tr>
     </thead>
@@ -26,14 +24,12 @@
     </tbody>
   </table>
 </script><script id="deltager-template" type="template">
-<td class="center-col">
-<input type="checkbox" name="status" value="1" />
-</td>
 <td><%= navn %></td>
-<td></td>
-<td class="center-col">
-<i class="glyphicon glyphicon-edit"></i>
-<i class="glyphicon glyphicon-remove"></i>
+<td class="action-col center-col">
+<small class="pull-right">
+<i class="glyphicon glyphicon-edit" title="Endre"></i>
+<i class="glyphicon glyphicon-remove" title="Fjern"></i>
+</small>
 </td>
 </script>
 <script id="app-template" type="template">
