@@ -12,12 +12,38 @@
 {% block bodyclass %}{% endblock bodyclass %}
 
 {% block body %}
+<script id="deltager-list-template" type="template">
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th class="status-col">Status</th>
+        <th>Task</th>
+        <th class="date-col">Due date</th>
+        <th class="action-col">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody class="deltagere-list">
+    </tbody>
+  </table>
+</script><script id="deltager-template" type="template">
+<td class="center-col">
+<input type="checkbox" name="status" value="1" />
+</td>
+<td><%= navn %></td>
+<td></td>
+<td class="center-col">
+<i class="glyphicon glyphicon-edit"></i>
+<i class="glyphicon glyphicon-remove"></i>
+</td>
+</script>
 <script id="app-template" type="template">
     <div class="container">
         <div class="row">
 
             <div class="col-md-9">
-            <h1>App</h1>
+            <h1>App</h1>            
+                <div class="deltagere">
+                </div>
             </div>
             
             <div class="col-md-3">
@@ -28,6 +54,7 @@
     </div>
 </script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}moment.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}underscore-min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}backbone-min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}backbone-forms/backbone-forms.min.js"></script>
