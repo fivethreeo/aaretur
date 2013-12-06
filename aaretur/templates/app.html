@@ -23,12 +23,15 @@
     <tbody class="deltagere-list">
     </tbody>
   </table>
-</script><script id="deltager-template" type="template">
+                      <a href="#" class="btn ok btn-primary add_deltager">Legg til deltager</a>
+
+</script>
+<script id="deltager-template" type="template">
 <td><%= navn %></td>
 <td class="action-col center-col">
 <small class="pull-right">
-<i class="glyphicon glyphicon-edit" title="Endre"></i>
-<i class="glyphicon glyphicon-remove" title="Fjern"></i>
+<i class="endre_deltager glyphicon glyphicon-edit" title="Endre"></i>
+<i class="fjern_deltager glyphicon glyphicon-remove" title="Fjern"></i>
 </small>
 </td>
 </script>
@@ -50,12 +53,14 @@
     </div>
 </script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}moment.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}underscore-min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}backbone-min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}backbone-forms/backbone-forms.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}backbone-forms/editors/list.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}backbone-forms/templates/bootstrap3.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}backbone.bootstrap-modal.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}app.js"></script>
 
 {% endblock body %}

@@ -34,7 +34,24 @@ $(function(){
             this.listenTo(this.model, 'destroy', this.remove);
 
         },
-        
+        events: {
+            'click .endre_deltager': 'editDeltager',
+            'click .fjern_deltager': 'fjernDeltager'
+        },
+            
+        fjernDeltager: function() {
+            this.model.destroy()
+        },            
+        editDeltager: function() {
+            var form = new DeltagerForm({model:this.model})
+            var modal = new Backbone.BootstrapModal({
+                content: form,
+                title: 'modal header',
+                animate: true
+            });
+            modal.open(function(){ form.commit(); });
+        },
+                    
         render: function() {
             this.$el.html(this.template(this.model.toJSON()));
             return this;
@@ -56,7 +73,20 @@ $(function(){
             Deltagere.add(new Deltager)
 
         },
-    
+        events: {
+            'click .add_deltager': 'addDeltager',
+        },        
+        
+        addDeltager: function() {
+            var model = new Deltager;
+            var form = new DeltagerForm({model:model})
+            var modal = new Backbone.BootstrapModal({
+                content: form,
+                title: 'modal header',
+                animate: true
+            });
+            modal.open(function(){ form.commit(); Deltagere.add(model); });
+        },    
         addOne: function(deltager) {
           var view = new DeltagerView({model: deltager});
           this.$('.deltagere-list').append(view.render().el);
