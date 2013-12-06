@@ -35,8 +35,8 @@ $(function(){
 
         },
         events: {
-            'click .endre_deltager': 'editDeltager',
-            'click .fjern_deltager': 'fjernDeltager'
+            'click .edit_deltager': 'editDeltager',
+            'click .remove_deltager': 'fjernDeltager'
         },
             
         fjernDeltager: function() {
