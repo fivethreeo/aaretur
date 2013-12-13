@@ -1,3 +1,4 @@
 Django
 -e git+git://github.com/fivethreeo/django-easytests.git#egg=django-easytests
 django-compressor
+south

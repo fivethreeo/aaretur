@@ -34,7 +34,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     'django.contrib.messages.context_processors.messages',
     "django.contrib.auth.context_processors.auth",
-    'sekizai.context_processors.sekizai',
 )
 
 MIDDLEWARE_CLASSES = (
